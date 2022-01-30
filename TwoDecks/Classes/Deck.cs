@@ -49,8 +49,11 @@ namespace TwoDecks
         public void Sort() {
             List<Card> sortedCards = new List<Card>(this);
             sortedCards.Sort(new CardComparerByValue());
-            // Use a foreach loop to call Add for each card in sortedCards
-            throw new NotImplementedException("The Sort method sorts the cards");
+            Clear();
+            foreach (Card card in sortedCards)
+            {
+                Add(card);
+            }
         }
     }
 }

@@ -54,22 +54,34 @@ namespace TwoDecks
 
         private void shuffleLeftDeck_Click(object sender, RoutedEventArgs e)
         {
-
+            if (Resources["leftDeck"] is Deck leftDeck)
+            {
+                leftDeck.Shuffle();
+            }
         }
 
         private void resetLeftDeck_Click(object sender, RoutedEventArgs e)
         {
-
+            if (Resources["leftDeck"] is Deck leftDeck)
+            {
+                leftDeck.Reset();
+            }
         }
 
         private void clearRightDeck_Click(object sender, RoutedEventArgs e)
         {
-
+            if (Resources["rightDeck"] is Deck rightDeck)
+            {
+                rightDeck.Clear();
+            }
         }
 
         private void sortRightDeck_Click(object sender, RoutedEventArgs e)
         {
-
+            if (Resources["rightDeck"] is Deck rightDeck)
+            {
+                rightDeck.Sort();
+            }
         }
 
         private void leftDeckListBox_KeyDown(object sender, KeyEventArgs e)
